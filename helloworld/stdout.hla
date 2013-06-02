@@ -1,0 +1,9 @@
+program StdOutDemo;
+
+#include( "stdlib.hhf" );
+
+begin StdOutDemo;
+
+stdout.put("Test", nl);
+
+end StdOutDemo;
