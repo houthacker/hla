@@ -3,5 +3,7 @@ dv
 hw
 exception
 while
+overlap
 *.o
 *.asm
+*.swp

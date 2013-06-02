@@ -1,0 +1,18 @@
+program OverlapDemo;
+
+#include( "stdlib.hhf" );
+
+begin OverlapDemo;
+
+mov(0, eax);
+mov(0, ax);
+mov(0, al);
+
+stdout.put("Enter a single character: ");
+stdin.getc();
+
+stdout.put("Contents of AL register: ", al, nl);
+stdout.put("Contents of AX register: ", ax, nl);
+stdout.put("Contents of EAX register: ", eax, nl);
+
+end OverlapDemo;
