@@ -1,0 +1,44 @@
+program SignExtension;
+#include( "stdlib.hhf" );
+
+static
+    u8: uns8;
+    i8: int8;
+
+begin SignExtension;
+
+    stdout.put( "Enter a value between 0 and 255: ");
+    stdin.getu8();
+    mov( al, u8 ); // move al's value to u8
+
+    stdout.put( "Enter a value between -127 and 128: ");
+    stdin.get( i8 );
+
+    stdout.put( "u8 = ", u8, " i8 = ", i8, nl );
+
+    stdout.put( "movsx(u8, ax )", nl );
+    movsx( u8, ax );
+    stdout.put( "u8 = ", u8, nl );
+
+    stdout.put( "movsx(i8, ax )", nl );
+    movsx( i8, ax );
+    stdout.put( "i8 = ", i8, nl );
+ 
+    mov( i8, al ); // move i8's value to al
+    stdout.put( "after mov( al, i8 ): ", al, nl );
+    
+    cbw();
+    stdout.put( "after cbw(): ", ax, nl );
+
+    cwde();
+    stdout.put( "after cwde(): ", eax, nl );
+
+    stdout.put( "mov( u8, al );", nl );
+    mov( u8, al );
+    stdout.put( "al = ", al, ", ax = ", ax, " eax = ", eax, nl );
+   
+    cbw();
+    cwde();
+    stdout.put( "al = ", al, ", ax = ", ax, " eax = ", eax, nl );
+
+ end SignExtension;

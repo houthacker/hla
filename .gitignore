@@ -4,6 +4,10 @@ hw
 exception
 while
 overlap
+logocalop
+signextension
+twoscomplement
+bitshift
 *.o
 *.asm
 *.swp
