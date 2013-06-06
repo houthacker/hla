@@ -13,32 +13,29 @@ begin BitShiftDemo;
     stdout.put( "i8 = ", i8, nl);
 
     shl(1, i8);
-    stdout.put( "shl(1, i8) = ", i8, ", @c = ");
     if( @c ) then
-        stdout.put( "true" );
+        stdout.put( "@c = true" );
     else
-        stdout.put( "false" );
+        stdout.put( "@c = false" );
     endif;
-    stdout.put( nl );
+    stdout.put( ", shl(1, i8) = ", i8, nl);
 
     mov(al, i8);
     shr(1, i8);
-    stdout.put( "shr(1, i8) = ", i8, ", @c = ");
     if( @c ) then
-        stdout.put( "true" );
+        stdout.put( "@c = true" );
     else
-        stdout.put( "false" );
+        stdout.put( "@c = false" );
     endif;
-    stdout.put( nl );
+    stdout.put( ", shr(1, i8) = ", i8, nl);
 
     mov(al, i8);
     sar(1, i8);
-    stdout.put( "sar(1, i8) = ", i8, ", @c = ");
     if( @c ) then
-        stdout.put( "true" );
+        stdout.put( "@c = true" );
     else
-        stdout.put( "false" );
+        stdout.put( "@c = false" );
     endif;
-    stdout.put( nl );
+    stdout.put( ", sar(1, i8) = ", i8, nl);
 
 end BitShiftDemo;

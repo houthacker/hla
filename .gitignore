@@ -8,6 +8,7 @@ logocalop
 signextension
 twoscomplement
 bitshift
+date
 *.o
 *.asm
 *.swp
